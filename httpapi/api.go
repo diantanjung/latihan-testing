@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-type UserDB interface{
+type UserDB interface {
 	FindByID(ID string) (string, error)
 }
 

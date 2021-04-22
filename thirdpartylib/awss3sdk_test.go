@@ -26,7 +26,7 @@ func TestGetObjectFromS3_Mock(t *testing.T) {
 		api: m,
 	}
 
-	m.On("GetObject", nil, nil).Return(nil, true)
+	// m.On("GetObject", nil, nil).Return(nil, fmt.Errorf("data fail to process"))
 
 	output := &s3.GetObjectOutput{
 		Body: ioutil.NopCloser(bytes.NewReader([]byte("this is the body foo bar baz"))),
